@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Textures/Pirate__0004_body.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Pirate__0000_head.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Pirate__0003_arm_right.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Pirate__0001_fore_arm_left.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Pirate__0010_leg_left.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Pirate__0008_leg_left_b.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Pirate__0009_foot_left.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Pirate__0007_leg_right.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Pirate__0005_leg_right_b.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Pirate__0006_foot_right.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Pirate__0002_fore_arm.png" type="Texture" id=11]
+
+[node name="Pirate" type="Node2D"]
+
+[node name="Torso" type="Sprite" parent="."]
+position = Vector2( -419.333, -48 )
+texture = ExtResource( 1 )
+offset = Vector2( 420, 60 )
+
+[node name="Head" type="Sprite" parent="Torso"]
+position = Vector2( -6.00002, -61.6667 )
+texture = ExtResource( 2 )
+offset = Vector2( 420, 60 )
+
+[node name="Left_Arm" type="Sprite" parent="Torso"]
+editor/display_folded = true
+show_behind_parent = true
+position = Vector2( 4, -26.6667 )
+texture = ExtResource( 3 )
+offset = Vector2( 420, 60 )
+
+[node name="Left_ForeArm" type="Sprite" parent="Torso/Left_Arm"]
+position = Vector2( 3.33334, 41.3333 )
+texture = ExtResource( 4 )
+offset = Vector2( 420, 60 )
+
+[node name="Left_Leg" type="Sprite" parent="Torso"]
+editor/display_folded = true
+show_behind_parent = true
+position = Vector2( 12.6667, 47.9999 )
+texture = ExtResource( 5 )
+offset = Vector2( 420, 60 )
+
+[node name="Left_LowerLeg" type="Sprite" parent="Torso/Left_Leg"]
+position = Vector2( 0, 32.6667 )
+texture = ExtResource( 6 )
+offset = Vector2( 420, 60 )
+
+[node name="Left_Foot" type="Sprite" parent="Torso/Left_Leg/Left_LowerLeg"]
+position = Vector2( 8.00003, 16.6667 )
+texture = ExtResource( 7 )
+offset = Vector2( 420, 60 )
+
+[node name="Right_Leg" type="Sprite" parent="Torso"]
+editor/display_folded = true
+position = Vector2( -5.99997, 54.6667 )
+texture = ExtResource( 8 )
+offset = Vector2( 420, 60 )
+
+[node name="Right_LowerLeg" type="Sprite" parent="Torso/Right_Leg"]
+position = Vector2( -2, 36.6667 )
+texture = ExtResource( 9 )
+offset = Vector2( 420, 60 )
+
+[node name="Right_Foot" type="Sprite" parent="Torso/Right_Leg/Right_LowerLeg"]
+position = Vector2( 9.33334, 18 )
+texture = ExtResource( 10 )
+offset = Vector2( 420, 60 )
+
+[node name="Right_Arm" type="Sprite" parent="Torso"]
+editor/display_folded = true
+position = Vector2( -19.3333, -20 )
+texture = ExtResource( 3 )
+offset = Vector2( 420, 60 )
+
+[node name="Right_ForeArm" type="Sprite" parent="Torso/Right_Arm"]
+position = Vector2( 2.66669, 42.6667 )
+texture = ExtResource( 11 )
+offset = Vector2( 420, 60 )
+
