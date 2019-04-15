@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Textures/background.jpg" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Pirate.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 511.518, 21.7348 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 27, 106 )
+
+[node name="Root" type="Node2D"]
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="background" type="Sprite" parent="Background"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background"]
+position = Vector2( 511, 438 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 515, 304 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 515, 304 )
+shape = SubResource( 2 )
+
